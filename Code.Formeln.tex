@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{graphicx} % Required for inserting images
+
+\title{ATE}
+\author{7557756}
+\date{July 2024}
+
+\begin{document}
+
+\maketitle
+
+\section{Formulas}
+
+\begin{align*}
+p = \text{the proportion treated (i.e., the proportion of cases } D=1), \\
+q = \text{the proportion untreated (i.e., the proportion of cases } D=0), \\
+\end{align*}
+\begin{align*}
+E(Y^1_{D=1}) = E(Y^1 \mid D=1), \\
+E(Y^0_{D=1}) = E(Y^0 \mid D=1), \\
+E(Y^1_{D=0}) = E(Y^1 \mid D=0), \\
+E(Y^0_{D=0}) = E(Y^0 \mid D=0).
+\end{align*}
+
+\begin{align*}
+E(Y^1_{D=1})p = E(Y^1_{D=1}) - E(Y^1_{D=1})q 
+\end{align*}
+
+\begin{align*}
+HTE = -E(Y^1_{D=1})q + E(Y^0_{D=1})q + E(Y^1_{D=0})q - E(Y^0_{D=0})q \\
+= -q[+E(Y^1_{D=1}) - E(Y^0_{D=1}) - E(Y^1_{D=0}) + E(Y^0_{D=0})] \\
+= -q[(E(Y^1_{D=1}) - E(Y^0_{D=1})) - ( E(Y^1_{D=0}) - E(Y^0_{D=0}))] 
+\end{align*}
+
+\begin{align*}
+= E(Y^1_{D=1}) - E(Y^0_{D=1})
+\end{align*}
+
+\begin{align*}
+E(Y^0_{D=1}) =  E(Y^0_{D=0}) + (E(Y^0_{D=1})- E(Y^0_{D=0}))
+\end{align*}
+
+\begin{align*}
+= E(Y^1_{D=1}) - E(Y^0_{D=0}) - (E(Y^0_{D=1})- E(Y^0_{D=0}))
+\end{align*}
+    
+\end{document}
